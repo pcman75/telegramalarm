@@ -1,7 +1,7 @@
 import os, json, requests
 
 def getSensorName(friendlyName):
-    name = friendlyName.replace(' ', '_').replace('.0', '').replace('-', '').lower()
+    name = friendlyName.replace(' ', '_').replace('.0', '').replace('-', '').replace('<','less').lower()
     return 'binary_sensor.' + name
 
 

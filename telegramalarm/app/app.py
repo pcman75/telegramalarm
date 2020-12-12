@@ -53,11 +53,14 @@ async def startup():
     #Before Telegram sends updates, you need to make a high-level request, like client.get_me()
     if await client.is_user_authorized():
         me = await client.get_me()
+        for channel in aoconfig['channels']:
+            triggerSensor(channel, "off", "initial", logger)
+
         logger.info(me.stringify())
     else:
         logger.info("Client is not authorized. Go to Ingress page")
 
-# After we're done serving (near shutdown), clean up the client
+# After we're done serving (near shutdown), clean up the client 
 @app.after_serving
 async def cleanup():
     await client.disconnect()
