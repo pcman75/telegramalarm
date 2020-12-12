@@ -21,6 +21,6 @@
   "ingress": true,
   "ingress_port": 0,
   "homeassistant_api": true,
-  "todo:image": "pcman75/image-{arch}-telegramalarm",
+  "todo-image": "pcman75/image-{arch}-telegramalarm",
   "arch": ["amd64", "armv7", "armhf", "i386" , "aarch64"]
 }
