@@ -22,10 +22,7 @@ Edit the configuration and replace the placholders for TG_API_ID and TG_API_HASH
 Click *OPEN WEB UI* in the Info page
 
 ## Step 4
-Enter your phone number and then the recieved code. You should get the session string.
-
-## Step 5
-Edit the configuration and replace the placholder for TG_SESSION with your session string you got from the previous step
+Enter your phone number and then the recieved code. That's it. You should get a welcome message with your Telegram login name
 
 # Usage
 Edit the configuration and add as many Telegram channels as you like. The "channels" could be telegram bot channels you are subscribed to or even conversations with your Telegram friends. 

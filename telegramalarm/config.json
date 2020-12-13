@@ -1,6 +1,6 @@
 {
   "name": "Telegram Sensor",
-  "version": "0.3",
+  "version": "0.4",
   "slug": "telegramalarm",
   "description": "Monitor Telegram channels or conversations. Binary sensors are created to signal new messages",
   "url": "https://github.com/pcman75/ha-telegram-channel-alarm",
@@ -9,9 +9,8 @@
   "options": {
     "TG_API_ID": 123456,
     "TG_API_HASH": "0123456789abcdef",
-    "TG_SESSION": "",
     "channels": ["My Channel", "John Doe"]
-  },
+   },
   "schema": {
     "TG_API_ID": "int(1,99999999)",
     "TG_API_HASH": "str",

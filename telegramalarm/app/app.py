@@ -23,7 +23,7 @@ with open('/data/options.json') as f:
   aoconfig = json.load(f)
 
 # Telethon client
-client = TelegramClient(StringSession(aoconfig['TG_SESSION']), aoconfig['TG_API_ID'], aoconfig['TG_API_HASH'])
+client = TelegramClient('/data/telegramalarm', aoconfig['TG_API_ID'], aoconfig['TG_API_HASH'])
 phone = None
 
 # Quart app
@@ -83,8 +83,9 @@ async def root():
         await client.sign_in(code=request.args['code'])
 
     # If we're logged in, show the session string
-    if await client.is_user_authorized():        
-        result = f'<H1>Welcome</H1><p>Change the configuration to use: TG_SESSION: {client.session.save()}</p>'
+    if await client.is_user_authorized():
+        me = await client.get_me()        
+        result = f'<H1>Welcome</H1><p>You are logged in to Telegram as: {utils.get_display_name(me)}</p>'
 
         return await render_template_string(BASE_TEMPLATE, content=result)
 
