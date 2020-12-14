@@ -14,7 +14,6 @@
   "schema": {
     "TG_API_ID": "int(1,99999999)",
     "TG_API_HASH": "str",
-    "TG_SESSION": "str",
     "channels": ["str", "str"]
   }, 
   "ingress": true,
