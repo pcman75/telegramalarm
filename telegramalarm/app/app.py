@@ -41,6 +41,7 @@ async def handler(event):
     logger.debug(f'Chat: {chat_name}')
     logger.debug(f'Sender: {utils.get_display_name(sender)}')
     logger.debug(f'Message: {event.raw_text}')
+    logger.debug(f'channels: {aoconfig["channels"]}')
     if(chat_name in aoconfig['channels']):
         triggerSensor(chat_name, "on", event.raw_text, logger)
         timer = Timer(5, triggerSensor, [chat_name, "off", event.raw_text, logger])
