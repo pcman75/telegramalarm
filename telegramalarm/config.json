@@ -1,6 +1,6 @@
 {
   "name": "Telegram Sensor",
-  "version": "0.5",
+  "version": "0.6",
   "slug": "telegramalarm",
   "description": "Monitor Telegram channels or conversations. Binary sensors are created to signal new messages",
   "url": "https://github.com/pcman75/ha-telegram-channel-alarm",
