@@ -16,7 +16,7 @@
     "TG_API_ID": "int(1,99999999)",
     "TG_API_HASH": "str",
     "channels": ["str","str"],
-    "LOG_LEVEL": "list('CRITICAL'|'ERROR'|'WARN'|'INFO'|'DEBUG'"
+    "LOG_LEVEL": "list('CRITICAL'|'ERROR'|'WARN'|'INFO'|'DEBUG')"
   }, 
   "ingress": true,
   "ingress_port": 0,
