@@ -16,12 +16,14 @@ formatter = logging.Formatter(
         '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-logger.setLevel(logging.INFO)
+
 
 # Session name, API ID and hash to use; loaded from config file
 with open('/data/options.json') as f:
   aoconfig = json.load(f)
 
+logger.setLevel(logging._nameToLevel(aoconfig['LOG_LEVEL']))
+                
 # Telethon client
 client = TelegramClient('/data/telegramalarm', aoconfig['TG_API_ID'], aoconfig['TG_API_HASH'])
 phone = None
