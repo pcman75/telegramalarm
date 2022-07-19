@@ -22,7 +22,7 @@ logger.addHandler(handler)
 with open('/data/options.json') as f:
   aoconfig = json.load(f)
 
-logger.setLevel(logging._nameToLevel(aoconfig['LOG_LEVEL']))
+logger.setLevel(logging._nameToLevel[aoconfig['LOG_LEVEL']])
                 
 # Telethon client
 client = TelegramClient('/data/telegramalarm', aoconfig['TG_API_ID'], aoconfig['TG_API_HASH'])
